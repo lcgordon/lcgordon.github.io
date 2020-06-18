@@ -95,7 +95,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #F0E3F2;
+		background: #E8DAEF;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -250,7 +250,7 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 4px #ffffff;
+		border-left: solid 4px #E8DAEF;
 		font-style: italic;
 		margin: 0 0 2rem 0;
 		padding: 0.5rem 0 0.5rem 2rem;
@@ -281,7 +281,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px #ffffff;
+		border-bottom: solid 1px #E8DAEF;
 		margin: 2.75rem 0;
 	}
 
