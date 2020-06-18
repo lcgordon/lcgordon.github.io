@@ -95,7 +95,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background: #1b1f22;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -112,13 +112,13 @@ input, select, textarea {
 /* Type */
 
 	html {
-		font-size: 14pt;
+		font-size: 16pt;
 	}
 
 		@media screen and (max-width: 1680px) {
 
 			html {
-				font-size: 10pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -140,15 +140,18 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #000000;
-		font-family: "Century", sans-serif;
+		color: #ffffff;
+		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
 	}
 
 	a {
-
+		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		color: inherit;
@@ -159,7 +162,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #000000;
+		color: #ffffff;
 		font-weight: 600;
 	}
 
@@ -172,11 +175,11 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		color: #ffffff;
 		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
-		text-transform: none;
+		text-transform: uppercase;
 		letter-spacing: 0.2rem;
 	}
 
@@ -259,7 +262,7 @@ input, select, textarea {
 	code {
 		background: rgba(255, 255, 255, 0.075);
 		border-radius: 4px;
-		font-family: "Century", sans-serif;
+		font-family: "Courier New", monospace;
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
@@ -392,7 +395,10 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-
+		-moz-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		-webkit-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 4px;
 		border: solid 1px #ffffff;
@@ -425,6 +431,7 @@ input, select, textarea {
 		}
 
 	select {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23ffffff' /%3E%3C/svg%3E");
 		background-size: 1.25rem;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
@@ -434,8 +441,8 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #000000;
-			background: #000000;
+			color: #ffffff;
+			background: #1b1f22;
 		}
 
 		select:focus::-ms-value {
@@ -505,7 +512,10 @@ input, select, textarea {
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-
+				-moz-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+				-webkit-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+				-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+				transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 				border-radius: 4px;
 				border: solid 1px #ffffff;
 				content: '';
@@ -569,62 +579,61 @@ input, select, textarea {
 
 /* Box */
 
-.box {
-    border-radius: 4px;
-    border: solid 1px #ffffff;
-    margin-bottom: 2rem;
-    padding: 1.5em;
-}
+	.box {
+		border-radius: 4px;
+		border: solid 1px #ffffff;
+		margin-bottom: 2rem;
+		padding: 1.5em;
+	}
 
-.box > :last-child,
-.box > :last-child > :last-child,
-.box > :last-child > :last-child > :last-child {
-    margin-bottom: 0;
-}
+		.box > :last-child,
+		.box > :last-child > :last-child,
+		.box > :last-child > :last-child > :last-child {
+			margin-bottom: 0;
+		}
 
-.box.alt {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-}
-
+		.box.alt {
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+		}
 
 /* Icon */
 
-.icon {
-    text-decoration: none;
-    border-bottom: none;
-    position: relative;
-}
+	.icon {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
 
-.icon:before {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    text-transform: none !important;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 400;
-}
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
+		}
 
-.icon > .label {
-    display: none;
-}
+		.icon > .label {
+			display: none;
+		}
 
-.icon:before {
-    line-height: inherit;
-}
+		.icon:before {
+			line-height: inherit;
+		}
 
-.icon.solid:before {
-    font-weight: 900;
-}
+		.icon.solid:before {
+			font-weight: 900;
+		}
 
-.icon.brands:before {
-    font-family: 'Font Awesome 5 Brands';
-}
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
 
 /* Image */
 
@@ -637,7 +646,8 @@ input, select, textarea {
 
 		.image:before {
 			pointer-events: none;
-			background-color: rgba(255, 255, 255, 0);
+			background-image: url("../../images/overlay.png");
+			background-color: rgba(19, 21, 25, 0.5);
 			border-radius: 4px;
 			content: '';
 			display: block;
@@ -904,10 +914,10 @@ input, select, textarea {
 				border-radius: 100%;
 				box-shadow: inset 0 0 0 1px #ffffff;
 				display: inline-block;
-				height: 1.75rem;
-				line-height: 1.75rem;
+				height: 2.25rem;
+				line-height: 2.25rem;
 				text-align: center;
-				width: 1.75rem;
+				width: 2.25rem;
 			}
 
 				ul.icons li a:hover {
@@ -997,7 +1007,10 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 4px;
 		border: 0;
@@ -1118,8 +1131,15 @@ input, select, textarea {
 		}
 
 		#bg:before {
-
-			background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+			-moz-transition: background-color 2.5s ease-in-out;
+			-webkit-transition: background-color 2.5s ease-in-out;
+			-ms-transition: background-color 2.5s ease-in-out;
+			transition: background-color 2.5s ease-in-out;
+			-moz-transition-delay: 0.75s;
+			-webkit-transition-delay: 0.75s;
+			-ms-transition-delay: 0.75s;
+			transition-delay: 0.75s;
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
 			background-size: auto,
  256px 256px;
 			background-position: center,
@@ -1130,7 +1150,15 @@ input, select, textarea {
 		}
 
 		#bg:after {
-
+			-moz-transform: scale(1.125);
+			-webkit-transform: scale(1.125);
+			-ms-transform: scale(1.125);
+			transform: scale(1.125);
+			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
+			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
+			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
+			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+			background-image: url("../../images/bg.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1222,16 +1250,25 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-
-
+		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		/*background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%); */
 		max-width: 100%;
 		text-align: center;
 	}
 
 		#header > * {
-
+			-moz-transition: opacity 0.325s ease-in-out;
+			-webkit-transition: opacity 0.325s ease-in-out;
+			-ms-transition: opacity 0.325s ease-in-out;
+			transition: opacity 0.325s ease-in-out;
 			position: relative;
-			margin-top: -1rem;
+			margin-top: 3.5rem;
 		}
 
 			#header > *:before {
@@ -1274,7 +1311,14 @@ input, select, textarea {
 		}
 
 			#header .content .inner {
-
+				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				-webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				-ms-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				-moz-transition-delay: 0.25s;
+				-webkit-transition-delay: 0.25s;
+				-ms-transition-delay: 0.25s;
+				transition-delay: 0.25s;
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
@@ -1299,13 +1343,13 @@ input, select, textarea {
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
-			border: solid 1px #000000;
+			border: solid 1px #ffffff;
 			border-radius: 4px;
 		}
 
 			#header nav ul li {
 				padding-left: 0;
-				border-left: solid 1px #000000;
+				border-left: solid 1px #ffffff;
 			}
 
 				#header nav ul li:first-child {
@@ -1325,15 +1369,27 @@ input, select, textarea {
 				}
 
 					#header nav ul li a:hover {
-						background-color: rgba(217, 217, 217, 0.5);
+						background-color: rgba(255, 255, 255, 0.075);
 					}
 
 					#header nav ul li a:active {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
 
+		#header nav.use-middle:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: calc(50% - 1px);
+			width: 1px;
+			height: 100%;
+			background: #ffffff;
+		}
 
-
+		#header nav.use-middle ul li.is-middle {
+			border-left: 0;
+		}
 
 		body.is-article-visible #header {
 			-moz-transform: scale(0.95);
@@ -1478,22 +1534,21 @@ input, select, textarea {
 	}
 
 		#main article {
-
--moz-transform: translateY(0.25rem);
--webkit-transform: translateY(0.25rem);
--ms-transform: translateY(0.25rem);
-transform: translateY(0.25rem);
--moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
--webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
--ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
-transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
-position: relative;
-width: 40rem;
-max-width: 100%;
-background-color: rgba(255, 255, 255, 0);
-border-radius: 4px;
-opacity: 0;
+			-moz-transform: translateY(0.25rem);
+			-webkit-transform: translateY(0.25rem);
+			-ms-transform: translateY(0.25rem);
+			transform: translateY(0.25rem);
+			-moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
+			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
+			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
+			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			position: relative;
+			width: 40rem;
+			max-width: 100%;
+			background-color: rgba(27, 31, 34, 0.85);
+			border-radius: 4px;
+			opacity: 0;
 		}
 
 			#main article.active {
@@ -1504,41 +1559,45 @@ opacity: 0;
 				opacity: 1;
 			}
 
-#main article .close {
-display: block;
-position: absolute;
-top: 0;
-right: 0;
-width: 4rem;
-height: 4rem;
-cursor: pointer;
-text-indent: 4rem;
-overflow: hidden;
-white-space: nowrap;
-}
+			#main article .close {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 4rem;
+				height: 4rem;
+				cursor: pointer;
+				text-indent: 4rem;
+				overflow: hidden;
+				white-space: nowrap;
+			}
 
-#main article .close:before {
-content: '';
-display: block;
-position: absolute;
-top: 0.75rem;
-left: 0.75rem;
-width: 2.5rem;
-height: 2.5rem;
-border-radius: 100%;
-background-position: center;
-background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23000000%3B stroke-width: 1.5%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
-background-size: 20px 20px;
-background-repeat: no-repeat;
-}
+				#main article .close:before {
+					-moz-transition: background-color 0.2s ease-in-out;
+					-webkit-transition: background-color 0.2s ease-in-out;
+					-ms-transition: background-color 0.2s ease-in-out;
+					transition: background-color 0.2s ease-in-out;
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0.75rem;
+					left: 0.75rem;
+					width: 2.5rem;
+					height: 2.5rem;
+					border-radius: 100%;
+					background-position: center;
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+					background-size: 20px 20px;
+					background-repeat: no-repeat;
+				}
 
-#main article .close:hover:before {
-background-color: rgba(122, 122, 122, 0.2);
-}
+				#main article .close:hover:before {
+					background-color: rgba(255, 255, 255, 0.075);
+				}
 
-#main article .close:active:before {
-background-color: rgba(255, 255, 255, 0.175);
-}
+				#main article .close:active:before {
+					background-color: rgba(255, 255, 255, 0.175);
+				}
 
 		@media screen and (max-width: 736px) {
 
@@ -1567,7 +1626,10 @@ background-color: rgba(255, 255, 255, 0.175);
 /* Footer */
 
 	#footer {
-
+		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		width: 100%;
 		max-width: 100%;
 		margin-top: 2rem;
