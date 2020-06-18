@@ -372,7 +372,7 @@ input, select, textarea {
 		}
 
 	label {
-		color:#ffffff;
+		color:#000000;
 		display: block;
 		font-size: 0.8rem;
 		font-weight: 300;
@@ -420,7 +420,7 @@ input, select, textarea {
 		select:focus,
 		textarea:focus {
 			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
+			border-color: #000000;
 			box-shadow: 0 0 0 1px #ffffff;
 		}
 
