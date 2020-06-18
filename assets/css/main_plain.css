@@ -186,7 +186,7 @@ input, select, textarea {
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-			border-bottom: solid 1px #ffffff;
+			border-bottom: solid 2px #000000;
 			width: -moz-max-content;
 			width: -webkit-max-content;
 			width: -ms-max-content;
@@ -571,7 +571,7 @@ input, select, textarea {
 
 .box {
     border-radius: 4px;
-    border: solid 1px #ffffff;
+    border: solid 1px #E9DFF0;
     margin-bottom: 2rem;
     padding: 1.5em;
 }
@@ -1242,7 +1242,7 @@ input, select, textarea {
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: #ffffff;
+				background: ##E9DFF0;
 			}
 
 		#header > :first-child {
@@ -1425,7 +1425,7 @@ input, select, textarea {
 
 					#header nav ul li {
 						border-left: 0;
-						border-top: solid 1px #ffffff;
+						border-top: solid 1px #E9DFF0;
 					}
 
 						#header nav ul li:first-child {
