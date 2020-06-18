@@ -372,7 +372,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #ffffff;
+		color:#ffffff;
 		display: block;
 		font-size: 0.8rem;
 		font-weight: 300;
@@ -1267,7 +1267,7 @@ input, select, textarea {
 
 		#header .content {
 			border-style: solid;
-			border-color: #ffffff;
+			border-color: #E8DAEF;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
