@@ -29,7 +29,7 @@
 						<nav>
 							<ul>
 								<li><a href="#about">About</a></li>
-								<li><a href="CV___Updated_April_2020.pdf">Resume</a></li>
+								<li><a href="CV_Academic_Gordon_Jan_2021.pdf">Resume</a></li>
 								<li><a href="#skills">Skills</a></li>
 								<li><a href="#research">My Work</a></li>
 								<li><a href="#contact">Contact</a></li>
@@ -45,25 +45,27 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<p>I'm a senior astrophysics major at Wellesley College about to apply to PhD programs in astronomy/astrophysics. I work
-								for Whitin Observatory as a Night Assistant running intro class labs, as a PlaneWave Observer doing TESS follow-up observations,
-								and at MIT as a UROP student working with the TESS team on a machine learning pipeline project. For a complete list of my research, you can check out my <a href="#research">Research page</a>.
-								In my free time I'm involved in on-campus theater, including the Wellesley College Shakespeare Society.</p>
+								<p>I'm a senior astrophysics major and CS minor at Wellesley College, currenly applying to PhD programs in astronomy/astrophysics! I currently work for the Astronomy Department at Wellesley
+									doing follow-up observations on exoplanet candidates for TESS and running the intro labs, as a research assistant at MIT working on unsupervised learning with the TESS dataset, and on
+									my senior thesis on matching the early rise of supernovae observed by TESS to theoretical models for progenitor systems. For a complete list of my research, you can check out
+									my <a href="#research">Research page</a>. In my nonexistent free time I was involved in on-campus theater, especially the Wellesley College Shakespeare Society, and the student
+									recreational observing club.</p>
 							<span class="image main"><img src="images/croppedposterphoto.png" alt="" /></span>
 							</article>
 						<!-- Skills -->
 							<article id="skills">
 								<h2 class="major">Education & Skills</h2>
 								<h3> Education </h3>
-								<p> Wellesley College. 2017 - present, expected graduation May 2021. B.A. in Astrophysics. Cum. GPA 3.6. </p>
+								<p> Wellesley College. 2017 - present, expected graduation May 2021. B.A. in Astrophysics, minor in CS. CGPA 3.68. </p>
 								<h3> Skills </h3>
 								<ul>
-									<li> 3+ years of Python - NumPy, SciPy, AstroPy, Astroquery (esp. Astroquery.MAST), Keras, TensorFlow, SKLearn </li>
-									<li> 2+ years of HTML/CSS, Javascript </li>
-									<li> 1+ years of MATLAB, Git </li>
+									<li> Python - 3+ years </li>
+									<li style="margin-left:2em">NumPy, SciPy, AstroPy, Astroquery (esp. Astroquery.MAST), Keras, TensorFlow, Scikit-Learn, Pandas, PyMySQL, emcee</li>
+									<li> HTML/CSS, Javascript - 3+ years </li>
+									<li> Java, MATLAB, SQL, Git - 1+ years </li>
 									<li> AIJ, ds9, TOPCAT </li>
 									<li> English (native), French (intermediate reading/writing, basic speaking) </li>
-									<li> Astronomy Outreach: Constellations/Sky Tours, Meades Observing, Talks </li>
+									<li> Astronomy Outreach: Constellations/Sky Tours, Meades Observing, Public Talks </li>
 									<li> Fabrication/Electrical Engineering - 3D Modeling (SolidWorks) and printing, laser cutting, soldering, machine shop tool use, parts testing </li>
 									<li> Other: Microsoft Office, LaTeX, optical design </li>
 								</ul>
@@ -77,21 +79,54 @@
 						<article id="research">
 								<h2 class="major">Research</h2>
 								<div>
+									<h3> Major Research Projects</h3>
 
-									<h2> Major Research Projects </h2>
-									<h3><a href="#TVariance">MIT UROP - Time Variance in TESS Light Curves </a> </h3>
-									<h3><a href="#TFollow">TESS Follow-Up at Wellesley College </a> </h3>
-									<h3><a href="#Spec">Fiber Optic Fed Spectrometer</a> </h3>
-									<h3><a href="#Accelerator">SULI Internship - Linear Accelerator</a> </h3>
-									<h3><a href="#DQ">REU - Double Quasars</a> </h3>
+									<ul>
+										<li><a href = "#SeniorThesis"> Senior Thesis: Detection and Modeling of Early Rise Supernovae </a></li>
+										<li><a href="#TVariance"><i>Mergen</i>: Unsupervised Learning on TESS Light Curves </a></li>
+										<li><a href="#TFollow">TESS Follow-Up at Wellesley College </a> </li>
+										<li><a href="#Spec">Fiber Optic Fed Spectrometer</a> </li>
+										<li><a href="#Accelerator">SULI Internship - Linear Accelerator</a></li>
+										<li><a href="#DQ">REU - Double Quasars</a></li>
+									</ul>
 
-									<h2> Smaller/Other Projects/Work </h2>
-									<h3><a href="#CS220">CS 220 Project: Wellesley Resources App</a> </h3>
-									<h3><a href="#NA">Intro Astro Night Assistant</a> </h3>
-									<h3><a href="#NBody">Simple N-Body Galaxy Mergers</a> </h3>
-									<h3><a href="#K2">K2 Stellar Flares</a> </h3>
+
+									<h3> Smaller/Other Projects/Work </h3>
+									<ul>
+										<li><a href = "#TNS">Python Access to TNS</a></li>
+										<li><a href = "#contours">Hubble Contour Producer</a></li>
+										<li><a href="#CS220">CS 220 Project: Wellesley Resources App</a> </li>
+										<li><a href="#NA">Intro Astro Night Assistant</a> </li>
+										<li><a href="#NBody">Simple N-Body Galaxy Mergers</a> </li>
+										<li><a href="#K2">K2 Stellar Flares</a> </li>
+									</ul>
 								</div>
 								</article>
+
+
+								<article id="SeniorThesis">
+									<h2 class="major">Detection and Modeling <br></br> of TESS Observed SN</h2>
+									<div>
+										<ul>
+												<li>Identifying a body of supernovae (SN) observed by TESS during their early rise and fitting models to the initial outburst to compare to theoretical models
+												for the progenitor systems and explosion mechanisms of said SN.</li>
+												<li>Advised by Dr. Richard French (Wellesley) and Dr. Tansu Daylan (MIT)</li>
+												<li>Sept. 2020 - present</li>
+										</ul>
+									</div>
+									</article>
+
+								<article id="TNS">
+									<h2 class="major">TNS Access</h2>
+									<div>
+										<ul>
+												<li>The Transient Name Server (TNS) has no Python port. So I wrote my own. </li>
+												<li> Available on GitHub <a href="https://github.com/lcgordon/tns_access">here</a></li>
+												<li> Allows the user to scrape information on a given target given its name or to run their search function and download the resulting CSV file without opening a browser!</li>
+												<li>January 2021</li>
+										</ul>
+									</div>
+									</article>
 
 								<article id="TVariance">
 									<h2 class="major">Time Variance in TESS <br></br>Light Curves </h2>
@@ -99,19 +134,19 @@
 										<ul>
 												<li>Writing a machine learning pipeline to process TESS SPOC light curves and classify them to identify non-exoplanet variants.</li>
 												<li> Using Python with Astroquery, Keras, TensorFlow, sklearn, and astropy.</li>
-												<li> Methods paper (3rd author) in prep for fall 2020; Work will become my senior thesis in astrophysics. </li>
+												<li> Methods paper (3rd author) in prep for spring 2021.</li>
 												<li> February 2020 - Present </li>
 										</ul>
 									</div>
 									</article>
 
 								<article id="TFollow">
-									<h2 class="major">TESS Follow-Up at Wellesley College </h2>
+									<h2 class="major">TESS Follow-Up at <br></br>Wellesley College </h2>
 									<div>
 										<ul>
 											<li>Worked in Wellesley's student observing program taking and reducing data on exoplanet candidates using our 0.7m PlaneWave and AIJ/ds9.</li>
 											<li>Took on additional roles as a target scheduler and writing up resource guides on telescope operation and data reduction.</li>
-											<li> Included on discovery publication (n-th author) in prep.</li>
+											<li> Nth author on <a href="https://arxiv.org/abs/2101.01726"><i>TESS Delivers Five New Hot Giant Planets...</i></a> for my work observing TOI 640 b</li>
 											<li> November 2018; January 2020 - Present </li>
 										</ul>
 									</div>
@@ -134,12 +169,13 @@
 									<div>
 										<ul>
 											<li>SULI Internship at LBNL in the ATAP Division</li>
-											<li>Worked on a compact accelerator project that used microelectromechanical wafers to handle the acceleration and focusing of the beams. </li>
-											<li> Wrote and ran Python simulations on LBNL's supercomputing cluster and did parts testing and integration for the new components as they came in. </li>
+											<li>Worked on a compact accelerator project that used microelectromechanical wafers to handle the acceleration and focusing of He or Ar beams. </li>
+											<li> Electrical engineering work upgrading the accelerator to a larger beam grid (112 aperatures from 9) and higher energy (1 MeV). </li>
+											<li> Wrote Python simulations of the internal particle motion and e&m fields. Got to run on Lawrencium, LBNL's supercomputer!</li>
 											<li> Fall 2019 </li>
 										</ul>
 									<span class="image main"><img src="images/highlystagedworkingphotocropped.jpg" alt="" /></span>
-									<p> <i> Working on installing a wafer stack to the vacuum chamber. </i> </p>
+									<p> <i> Working on installing a wafer stack to the vacuum chamber. (Extremely staged photo taken by lab PR team.)</i> </p>
 									</div>
 									</article>
 
@@ -156,16 +192,25 @@
 									</div>
 									</article>
 
+									<article id="contours">
+										<h2 class="major">Hubble Contours</h2>
+										<div>
+										<ul>
+											<li>Project derived from <a href="#DQ">double quasar search work</a> where as part of a hackathon I produced a Python package that produces contour plots around a given
+											set of coordinates, provided those coordinates were imaged by Hubble</li>
+											<li> Code available <a href="https://github.com/lcgordon/hubble_contours">here on GitHub</a>
+										</ul>
+									</div>
+									</article>
+
 								<article id="CS220">
 									<h2 class="major">Wellesley Resources App</h2>
-									<h2> CS 220 Project: Wellesley Resources App</h2>
 									<ul>
 										<li>CS 220: Human Computer Interaction. Summer 2020</li>
 										<li> Worked with a team to design and build an application to consolidate access to Wellesley's student resources. </li>
 										<li> Work was done with UX at the focus of the design.</li>
 										<li> More details <a href="http://cs.wellesley.edu/~wresources2020/w-resources-website/">here</a></li>
 									</ul>
-
 								</article>
 
 								<article id="NA">
@@ -192,7 +237,7 @@
 										</article>
 
 										<article id="K2">
-											<h2 class="major">Python Analysis of Stellar Flares in K2 Data</h2>
+											<h2 class="major">Python Analysis of Stellar <br></br>Flares in K2 Data</h2>
 											<div>
 												<ul>
 													<li> MIT 12.411 Astronomy Field Camp at Lowell Observatory. January 2019.</li>
