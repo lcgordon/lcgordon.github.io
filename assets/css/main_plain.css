@@ -95,8 +95,8 @@ input, select, textarea {
 	}
 
 	body {
-		/*background: #E9DFF0; !important */
-		background: #E6E6FA;
+		/*background: #effafc; !important */
+		background: #effafc;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -141,7 +141,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #000000;
+		: #000000;
 		font-family: "Century", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
@@ -149,18 +149,19 @@ input, select, textarea {
 	}
 
 	a {
-
+		color:#000000;
 		border-bottom: solid 2px rgba(0, 0, 0, 1);
 		text-decoration: none;
-		color: inherit;
+		: inherit;
 	}
 
 		a:hover {
-			border-bottom-color: transparent;
+			color:green;
+			border-bottom-: transparent;
 		}
 
 	strong, b {
-		color: #000000;
+		: #000000;
 		font-weight: 600;
 	}
 
@@ -173,7 +174,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		: #000000;
 		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
@@ -251,7 +252,7 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 4px #E9DFF0;
+		border-left: solid 4px #effafc;
 		font-style: italic;
 		margin: 0 0 2rem 0;
 		padding: 0.5rem 0 0.5rem 2rem;
@@ -282,7 +283,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px #E9DFF0;
+		border-bottom: solid 1px #effafc;
 		margin: 2.75rem 0;
 	}
 
@@ -524,7 +525,7 @@ input, select, textarea {
 		input[type="radio"]:checked + label:before {
 			background: #ffffff !important;
 			border-color: #ffffff !important;
-			color: #1b1f22;
+			color: #ffffff;
 			content: '\f00c';
 		}
 
@@ -572,7 +573,7 @@ input, select, textarea {
 
 .box {
     border-radius: 4px;
-    border: solid 1px #E9DFF0;
+    border: solid 1px #effafc;
     margin-bottom: 2rem;
     padding: 1.5em;
 }
@@ -1243,7 +1244,7 @@ input, select, textarea {
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: ##E9DFF0;
+				background: ##effafc;
 			}
 
 		#header > :first-child {
@@ -1258,7 +1259,7 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #E9DFF0;
+			border: solid 1px #effafc;
 			border-radius: 100%; /* remove this section? */
 		}
 
@@ -1268,7 +1269,7 @@ input, select, textarea {
 
 		#header .content {
 			border-style: solid;
-			border-color: #E9DFF0;
+			border-color: #effafc;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
@@ -1426,7 +1427,7 @@ input, select, textarea {
 
 					#header nav ul li {
 						border-left: 0;
-						border-top: solid 1px #E9DFF0; /* IT WAS THIS FUCKER */
+						border-top: solid 1px #effafc; /* IT WAS THIS FUCKER */
 					}
 
 						#header nav ul li:first-child {
