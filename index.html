@@ -46,6 +46,11 @@
                 <a href="https://astrobites.org/author/lgordon/" target="_blank"><img src="img/astrobites-logo-1-CMYK_betterres.png" alt="Astrobites" class="w-12 h-12 object-contain"></a>
                 <span><i class="fa fa-external-link" aria-hidden="true" id="astrobites"></i>Astrobites</span>
             </div>
+            
+            <div class="desktop-icon" data-window="console">
+                <img src="img/icons/console_prompt-0.png" alt="Console" class="w-12 h-12 object-contain">
+                <span>Console</span>
+            </div>
 
         </div>
 
@@ -55,7 +60,7 @@
 
    <template id="welcome">
         <div class="wc-container">
-            <br>
+            
             <p>Hi! I'm Lindsey Gordon, a fourth year Ph.D. candidate in astrophysics at the University of Minnesota. I work on AGN jet - ICM feedback, mostly in the realm of
                 simulations and HPC. You can check out the links on the desktop to learn more about me and my research work.
             </p>
@@ -91,6 +96,17 @@
             width="100%" 
             height="100%" 
             src="internal/settings.html" 
+            allowtransparency="true"
+            loading="lazy"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+        </iframe>
+    </template>
+
+    <template id="console">
+        <iframe 
+            width="100%" 
+            height="100%" 
+            src="console/console.html" 
             allowtransparency="true"
             loading="lazy"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">

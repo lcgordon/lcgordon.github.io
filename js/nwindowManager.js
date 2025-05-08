@@ -9,7 +9,7 @@ const WindowSystem = {
     activeWindow: null,
     zIndexCounter: 50,
     mobileInitialized: false,
-    iframeWindows: ['about', 'projects',  'links'],
+    iframeWindows: ['about', 'projects',  'links', 'console'],
 
     isMobileDevice() {
         return window.innerWidth <= 768;
@@ -47,6 +47,7 @@ const WindowSystem = {
             contact: { width: 1200, height: 400 },
             projects: { width: 800, height: 600 },
             links: { width: 700, height: 600 },
+            console: {width:600, height:60},
         };
         return sizes[type] || { width: 500, height: 600 };
     },
@@ -588,6 +589,7 @@ const WindowSystem = {
             welcome: 'img/icons/computer-5.png',
             about: 'img/icons/directory_open_file_mydocs-5.png',
             projects: 'img/icons/shell_window5-0.png',
+            console: 'img/icons/console_prompt-0.png',
             links: 'img/icons/help_book_cool-4.png',
             
         };
@@ -601,7 +603,8 @@ const WindowSystem = {
             projects: 'Projects',
             contact: 'Contact',
             links: 'Credits',
-            astro: 'Astrobites'
+            astro: 'Astrobites',
+            console: 'lcgordon@github.io - zsh',
         };
         return titles[type] || type.charAt(0).toUpperCase() + type.slice(1);
     },
