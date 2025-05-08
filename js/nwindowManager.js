@@ -45,7 +45,7 @@ const WindowSystem = {
             welcome: { width: 600, height: 40 },
             about: { width: 1000, height: 600 },
             contact: { width: 1200, height: 400 },
-            projects: { width: 600, height: 400 },
+            projects: { width: 800, height: 600 },
             links: { width: 700, height: 600 },
         };
         return sizes[type] || { width: 500, height: 600 };
@@ -389,7 +389,7 @@ const WindowSystem = {
             startX = e.clientX;
             startY = e.clientY;
             startWidth = windowElement.offsetWidth;
-            startHeight = windowElement.offsetHeight;
+            startHeight = windowElement.offsetHeight; 
             this.setActiveWindow(windowElement.id);
             
             windowElement.style.willChange = 'width, height';

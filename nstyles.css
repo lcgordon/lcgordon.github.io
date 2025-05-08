@@ -529,7 +529,7 @@ a[href^='http']:hover {
     margin: 24px;
 }
 
-/* Mobile Navigation
+ /* Mobile Navigation */
 .mobile-nav {
     display: none;
     position: fixed;
@@ -563,7 +563,7 @@ a[href^='http']:hover {
 
 .mobile-nav-item:active {
     background: var(--accent_internal_bg);
-} */
+} 
 
 
 /* Animations */
