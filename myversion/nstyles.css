@@ -1,0 +1,1986 @@
+/* Base Variables */
+:root {
+    --icon-accent: rgba(63, 19, 34, 1);
+    --80-icon-accent: rgba(63, 19, 34, 0.8);
+    --60-icon-accent: rgba(63, 19, 34, 0.6);
+    --25-icon-accent: rgba(63, 19, 34, 0.25);
+    --15-icon-accent: rgba(63, 19, 34, 0.15);
+    --5-icon-accent: rgba(63, 19, 34, 0.05);
+    
+    --header_accent: rgba(112, 121, 140, 1);
+    --90-header_accent: rgba(112, 121, 140, 0.9);
+    --60-header_accent: rgba(112, 121, 140, 0.6);
+    --40-header_accent: rgba(112, 121, 140, 0.4);
+    --30-header_accent: rgba(112, 121, 140, 0.3); 
+    --10-header_accent: rgba(112, 121, 140, 0.1);  
+
+    --bright-accent: rgba(73, 78, 91, 1); 
+
+    --accent_internal_bg: rgba(73, 78, 91, 1); 
+    --accent_volume: rgba(177, 201, 230, 1);
+
+    --text-color: rgba(51, 51, 51, 1); 
+
+    --95-white: rgba(255, 255, 255, 0.95); 
+    --70-white: rgba(255, 255, 255, 0.7);
+    --50-white: rgba(255, 255, 255, 0.5); 
+    --20-white: rgba(255, 255, 255, 0.2);
+    --10-white: rgba(255, 255, 255, 0.1);
+
+
+    --50-black: rgba(0, 0, 0, 0.5);
+    --10-black: rgba(0, 0, 0, 0.1);
+
+    --navyb: rgba(43, 48, 58, 1); 
+
+    --accent_hover: rgba(73, 78, 91, 1); 
+    --80-accent_hover: rgba(73, 78, 91, 0.8);
+    --50-accent_hover: rgba(73, 78, 91, 0.5);
+    --20-accent_hover: rgba(73, 78, 91, 0.2);
+    --10-accent_hover: rgba(73, 78, 91, 0.1);
+    
+    --header-height: 100%;
+    --mobile-nav-height: 100%;
+    --z-logo: 10;
+    --z-window: 100;
+    --z-window-active: 100;
+    --z-window-maximized: 30;
+    --z-taskbar: 2000;
+    --z-modal: 100;
+}
+
+/* .windows-button{} */
+.windows-button{display:block; 
+                color:#000;background-color:silver;
+                position:relative;z-index:10;
+                float:right;
+                /* -moz-appearance:none; */
+                /* appearance:none; */
+                font-weight:700;
+                letter-spacing:.05em;
+                padding:.45em .75em;
+                border-left:2px solid #ededed;border-top:2px solid #ededed; 
+                border-right:2px solid #404040;
+                border-bottom:2px solid #404040;
+}
+
+.linkmenu {
+    height: 100%; /* 100% Full-height */
+    width: 20%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(174, 190, 157); 
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.credit-menu-2 {
+    height: 7%;
+    width: 20%;
+    position: fixed;
+    z-index: 2500;
+    bottom: 0%;
+    background: white; 
+    border: 2px solid var(--header_accent);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px var(--30-header_accent);
+    padding: 16px;
+}
+
+.credit-menu-2 p {
+    color: white; 
+    align-items: center;
+}
+
+/* Lindsey added this section to put the credit menu in */
+.credit-menu {
+    position: fixed;
+    bottom: 7%;
+    left: 0%;
+    width: 20%;
+    background: white; 
+    border: 2px solid var(--header_accent);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px var(--30-header_accent);
+    padding: 16px;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.credit-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--header_accent);
+}
+
+#linkscredits:hover {
+    background: var(--10-header_accent);
+    transform: translateX(4px);
+}
+
+* {
+    font-family: "Trebuchet MS";
+}
+
+body {
+    background: #F5F1ED;
+    overflow: hidden;
+    color: var(--text-color);
+    /* font-family: system-ui, -apple-system, sans-serif; */
+}
+
+a[href^='http'] {
+    color: var(--bright-accent);
+}
+
+a[href^='http']:hover {
+    color: var(--bright-accent);
+    background: var(--accent_internal_bg);
+    transform: translateX(4px);
+}
+
+#astrobites {
+    background-color: transparent;
+    width: 60px; 
+    height: 20px; 
+    font-size: 8px;
+}
+
+/* Window Styles */
+.window {
+    position: fixed;
+    min-width: 400px;
+    min-height: 200px;
+    max-height: calc(100vh - 100px);
+    border-radius: 8px;
+    background: var(--95-white);
+    border: 2px solid var(--bright-accent);
+    box-shadow: 
+        0 8px 32px var(--30-header_accent),
+        inset 0 0 0 2px var(--50-white);
+    display: flex;
+    flex-direction: column;
+    animation: windowPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    height: auto;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.window::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.window.maximized {
+    border-radius: 0;
+    border: none;
+    animation: windowMaximize 0.3s ease-in-out;
+}
+
+.window.maximized::before {
+    border-radius: 0;
+}
+
+.window.minimizing {
+    animation: windowMinimize 0.3s ease-in-out;
+}
+
+/* Window Header and Controls */
+.window-header {
+    padding: 12px;
+    background: linear-gradient(to bottom, var(--bright-accent), var(--header_accent));
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 0 var(--10-black);
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent_volume);
+    flex-shrink: 0;
+    height: 20px;
+}
+
+.window.maximized .window-header {
+    border-radius: 0;
+}
+
+.window-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* These are the controls for the subwindows, like in about */
+.window-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--50-black);
+    font-size: 8px;
+    transition: all 0.2s ease;
+}
+
+.control:hover {
+    transform: scale(1.2);
+}
+ 
+
+.control i {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.control:hover i {
+    opacity: 1;
+}
+
+/* Window Content */
+.window-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: var(--header_accent) var(--accent_internal_bg);
+}
+
+.window-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.window-content::-webkit-scrollbar-track {
+    background: var(--accent_internal_bg);
+}
+
+.window-content::-webkit-scrollbar-thumb {
+    background-color: var(--header_accent);
+    border-radius: 4px;
+}
+
+
+/* Resize Handle */
+.window-resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    cursor: se-resize;
+    z-index: 10;
+}
+
+.window.maximized .window-resize-handle {
+    display: none;
+}
+
+
+/* this controls the dropdown menu in the header */
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--header_accent);
+}
+
+.menu-item:hover {
+    background: var(--10-header_accent);
+    transform: translateX(4px);
+}
+
+.menu-item i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.menu-divider {
+    height: 2px;
+    background: var(--header_accent);
+    margin: 8px 0;
+    opacity: 0.3;
+}
+
+/* Animation */
+@keyframes menuSlideUp {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*the start menu used to be the little dropdown with your name at top left */
+.start-menu {
+    animation: menuSlideUp 0.2s ease-out;
+}
+
+
+/* Add to your nstyles.css */
+
+/* Modern Taskbar Base */
+#taskbar {
+    height: 100%; /* this is 100% of the height it's stuck at...*/
+    width: 20%;
+    background: var(--50-white);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--20-accent_hover);
+    box-shadow: 0 2px 12px var(--10-accent_hover);
+}
+
+/* Logo Container */
+.menu-bar-item:first-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Logo Icon Container */
+.menu-bar-item:first-child .logo-container {
+    width: 28px;
+    height: 28px;
+    /* background: linear-gradient(135deg, #ffafd7, #916892); */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-bar-item:first-child .logo-container i {
+    color: white;
+    font-size: 14px;
+}
+
+/* Changed the menu bar to use flex-grow */
+.menu-bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 16px;
+    flex: 1; /* Added this to allow menu to take available space */
+}
+
+/* Re-enabled the active windows section and positioned it after Help */
+#active-windows {
+    display: flex;
+    gap: 8px;
+    margin-left: 16px; /* Space between Help and window tabs */
+}
+
+/* Kept status icons right-aligned */
+.ml-auto {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 4px;  /* Reduced gap between menu items */
+}
+
+/* Main menu items */
+.menu-bar > .menu-bar-item {
+    padding: 0 8px;  /* Added consistent padding to menu items */
+}
+
+/* Window tabs styling */
+#active-windows {
+    display: flex;
+    gap: 6px;
+    margin-left: 4px;  /* Smaller margin after Help menu */
+}
+
+.menu-bar-item {
+    color: var(--80-icon-accent);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    bottom: 0%;
+    left: 0%;
+    z-index: 25000;
+}
+
+.menu-bar-item:hover {
+    color: var(--icon-accent);
+    background: var(--10-accent_hover);
+}
+ 
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #taskbar {
+        height: 100%;
+    }
+
+    .menu-bar-item:not(:first-child) {
+        display: none;
+    }
+
+    .status-group {
+        padding: 4px 8px;
+    }
+
+    .theme-toggle-btn {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+/* Taskbar Item */
+.taskbar-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: var(--50-white);
+    color: var(--icon-accent);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid transparent;
+}
+
+.taskbar-item:hover {
+    background: var(--70-white);
+    border-color: var(--bright-accent);
+}
+
+.taskbar-item.active {
+    background: white;
+    border-color: var(--bright-accent);
+    box-shadow: 0 2px 8px var(--95-white);
+}
+
+.taskbar-item.minimized {
+    opacity: 0.6;
+}
+
+/* Lightbox */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--30-header_accent);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.window.lightbox {
+    position: relative;
+    width: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: 24px;
+}
+
+/* Mobile Navigation
+.mobile-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--mobile-nav-height);
+    background: var(--95-white);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid var(--bright-accent);
+    padding: 8px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--icon-accent);
+    font-size: 18px;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+.mobile-nav-item span {
+    font-size: 10px;
+}
+
+.mobile-nav-item:active {
+    background: var(--accent_internal_bg);
+} */
+
+
+/* Animations */
+@keyframes windowPop {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes windowMaximize {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes windowMinimize {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes menuSlideUp {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatAnimationMobile {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* Transitions */
+.window {
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+
+/* General Utilities */
+.hidden {
+    display: none !important;
+}
+
+.contents {
+    display: contents !important;
+}
+
+/* Base Variables */
+:root {
+    --header-height: 100%;
+    --mobile-nav-height: 60px;
+}
+
+/* Base Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Windows */
+    .window {
+        min-width: 300px;
+        width: 95vw !important;
+        max-height: calc(100vh - var(--header-height) - 20px);
+        margin: 10px auto;
+        border-radius: 12px;
+        position: fixed;
+        left: 50% !important;
+        transform: translateX(-50%);
+        top: calc(var(--header-height) + 10px);
+    }
+
+    .window-header {
+        padding: 8px 12px;
+        height: auto;
+        min-height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .window-controls {
+        display: flex;
+        gap: 8px;
+        margin-left: auto;
+    }
+
+    .control {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+    }
+
+    .control i {
+        font-size: 8px;
+        opacity: 1;
+        color: var(--50-black);
+    }
+
+    .window-title {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .window-content {
+        padding: 16px !important;
+        max-height: calc(100vh - var(--header-height) - 100px);
+        overflow-y: auto;
+    }
+
+    /* Taskbar */
+    #taskbar {
+        height: var(--header-height);
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--95-white);
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid var(--bright-accent);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .menu-bar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        height: 100%;
+    }
+
+    .menu-bar-item {
+        padding: 8px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: var(--icon-accent);
+    }
+
+    .menu-bar-item:first-child span {
+        display: inline-block;
+        margin-left: 6px;
+        font-size: 14px;
+    }
+
+    .menu-bar-item:not(:first-child) span {
+        display: none;
+    }
+
+    .menu-bar-item i {
+        font-size: 14px;
+        display: inline-block !important;
+    }
+
+
+    /* Mobile Navigation */
+    .mobile-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--mobile-nav-height);
+        background: var(--95-white);
+        backdrop-filter: blur(10px);
+        border-top: 2px solid var(--bright-accent);
+        padding: 8px;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: var(--icon-accent);
+        font-size: 18px;
+        padding: 4px 12px;
+        border-radius: 8px;
+    }
+
+    .mobile-nav-item span {
+        font-size: 10px;
+    }
+
+    .mobile-nav-item:active {
+        background: var(--accent_internal_bg);
+    }
+
+
+    /* Content Specific */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* Hide desktop elements */
+    .fixed.top-16.left-4 {
+        display: none;
+    }
+
+    #active-windows {
+        display: none;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 380px) {
+    :root {
+        --header-height: 100%;
+        --mobile-nav-height: 50px;
+    }
+
+    #taskbar {
+        padding: 0 8px;
+    }
+
+    .menu-bar {
+        gap: 6px;
+    }
+
+    .menu-bar-item {
+        padding: 6px;
+    }
+
+    .menu-bar-item i {
+        font-size: 12px;
+    }
+
+    .ml-auto i {
+        font-size: 12px;
+    }
+
+    #time {
+        font-size: 12px;
+        min-width: 58px;
+    }
+
+    .theme-toggle-btn {
+        padding: 4px;
+    }
+
+    .window {
+        min-width: 280px;
+        border-radius: 10px;
+    }
+
+    .window-header {
+        padding: 6px 10px;
+    }
+
+    .control {
+        width: 14px;
+        height: 14px;
+    }
+
+    .window-title {
+        font-size: 12px;
+    }
+
+    .mobile-nav-item {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .mobile-nav-item span {
+        font-size: 9px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+}
+
+/* Landscape Mode */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    :root {
+        --header-height: 100%;
+    }
+
+    .window {
+        max-height: calc(100vh - var(--header-height) - 20px);
+    }
+
+    .window-content {
+        max-height: calc(100vh - var(--header-height) - 80px);
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .window {
+        max-width: 90vw;
+    }
+
+    #taskbar {
+        height: 100%;
+    }
+
+    .menu-bar-item span {
+        display: inline-block !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .window {
+        max-width: 85vw;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .control i {
+        opacity: 1;
+    }
+
+    .window-controls {
+        gap: 12px;
+    }
+
+    .menu-bar-item:active,
+    .theme-toggle-btn:active {
+        background: var(--accent_internal_bg);
+    }
+
+    .mobile-nav-item:active {
+        background: rgba(var(--header_accent), 0.1);
+    }
+
+}
+
+/* High DPI Screen Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .window {
+        border-width: 0.5px;
+    }
+
+    .control {
+        border-width: 0.5px;
+    }
+
+}
+
+
+/* Base Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Taskbar adjustments */
+    #taskbar {
+        height: 100%;
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+    }
+
+    .menu-bar {
+        gap: 2px;
+        height: 100%;
+    }
+
+    .menu-bar-item {
+        padding: 4px;
+        height: 100%;
+    }
+
+    /* Ensure controls are visible and properly sized */
+    .window-controls {
+        display: flex;
+        gap: 6px;
+        margin-left: 8px;
+    }
+
+    .control {
+        width: 18px;
+        height: 18px;
+    }
+
+    .control i {
+        font-size: 10px;
+        opacity: 1;
+    }
+
+    /* Status icons spacing */
+    .ml-auto {
+        gap: 8px;
+    }
+
+    .theme-toggle-btn {
+        padding: 4px;
+        margin: 0 4px;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 380px) {
+    #taskbar {
+        padding: 0 6px;
+        gap: 2px;
+    }
+
+    .menu-bar {
+        gap: 1px;
+    }
+
+    .menu-bar-item {
+        padding: 3px;
+    }
+
+    .menu-bar-item i {
+        font-size: 12px;
+    }
+
+    .control {
+        width: 16px;
+        height: 16px;
+    }
+
+    .ml-auto {
+        gap: 6px;
+    }
+
+}
+
+/* Mobile Navigation Base Styles */
+.mobile-nav {
+    display: none; /* Hidden by default on desktop */
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 768px) {
+    /* Show mobile navigation */
+    .mobile-nav {
+        display: flex !important; /* Force display for mobile */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--mobile-nav-height);
+        background: var(--95-white);
+        backdrop-filter: blur(10px);
+        border-top: 2px solid var(--bright-accent);
+        padding: 8px;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    /* Style mobile navigation items */
+    .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: var(--icon-accent);
+        font-size: 18px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: background-color 0.2s;
+    }
+
+    .mobile-nav-item:active {
+        background: var(--accent_internal_bg);
+    }
+
+    .mobile-nav-item i {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+
+    .mobile-nav-item span {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    /* Hide desktop icons */
+    .desktop-icon {
+        display: none;
+    }
+
+    /* Adjust window positioning for mobile */
+    .window {
+        width: 92vw !important;
+        left: 4vw !important;
+        transform: none !important;
+        margin-bottom: var(--mobile-nav-height);
+    }
+
+}
+
+/* Small screens adjustments */
+@media screen and (max-width: 380px) {
+    .mobile-nav {
+        height: calc(var(--mobile-nav-height) - 10px);
+        padding: 4px;
+    }
+
+    .mobile-nav-item {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .mobile-nav-item i {
+        font-size: 20px;
+    }
+
+    .mobile-nav-item span {
+        font-size: 10px;
+    }
+}
+
+/* Mobile Window Styles */
+@media screen and (max-width: 768px) {
+    .window {
+        position: fixed !important;
+        border-radius: 12px !important;
+        max-height: calc(100vh - 120px) !important; /* Account for header and mobile nav */
+        overflow: hidden;
+        box-shadow: 0 4px 20px var(--10-black) !important;
+    }
+
+    /* Simplified header for mobile */
+    .window-header {
+        padding: 12px !important;
+        height: auto !important;
+    }
+
+    /* Larger controls for touch */
+    .window-controls .control {
+        width: 24px !important;
+        height: 24px !important;
+        margin-left: 8px !important;
+    }
+
+    .control i {
+        font-size: 12px !important;
+        opacity: 1 !important;
+    }
+
+    /* Adjust content padding */
+    .window-content {
+        padding: 16px !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
+    }
+
+    /* Hide desktop-only elements */
+    .window-resize-handle,
+    .minimize,
+    .maximize {
+        display: none !important;
+    }
+
+    /* Responsive grids */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* Responsive forms */
+    input, textarea, select {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+    }
+
+    /* Animation adjustments */
+    .window {
+        animation: mobileWindowPop 0.3s ease-out !important;
+    }
+
+    @keyframes mobileWindowPop {
+        0% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+/* Small screens adjustments */
+@media screen and (max-width: 380px) {
+    .window {
+        width: 96vw !important;
+        left: 2vw !important;
+    }
+
+    .window-header {
+        padding: 8px !important;
+    }
+
+    .window-content {
+        padding: 12px !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .window {
+        max-height: calc(100vh - 80px) !important;
+        top: 40px !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .window-content {
+        cursor: default !important;
+    }
+
+    .window-content::-webkit-scrollbar {
+        width: 0 !important;
+    }
+}
+
+/* Add these styles to your nstyles.css file */
+.mobile-nav-item {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--icon-accent);
+    cursor: pointer;
+    width: auto;
+    flex: 1;
+}
+
+.mobile-nav-item i {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.mobile-nav-item span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.mobile-nav-item:active {
+    background: var(--accent_internal_bg);
+}
+
+
+/* Small screen adjustments */
+@media screen and (max-width: 380px) {
+    .mobile-nav-item {
+        padding: 6px 12px;
+    }
+
+    .mobile-nav-item i {
+        font-size: 20px;
+    }
+
+    .mobile-nav-item span {
+        font-size: 10px;
+    }
+}
+
+/* Add these styles to your nstyles.css */
+
+@media screen and (max-width: 768px) {
+    /* Hide menu items but keep Polly button */
+    .menu-bar-item:not(:first-child) {
+        display: none !important;
+    }
+
+    /* Keep only essential items in taskbar */
+    #taskbar {
+        justify-content: space-between;
+    }
+
+    .menu-bar {
+        flex-shrink: 0;
+    }
+
+}
+
+
+
+/* Window Mobile Styles */
+.window.mobile {
+    position: fixed;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 92vw !important;
+    max-height: calc(100vh - var(--header-height) - var(--mobile-nav-height));
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.window.mobile .window-header {
+    padding: 16px;
+    height: auto;
+}
+
+.window.mobile .window-controls {
+    gap: 12px;
+}
+
+.window.mobile .control {
+    width: 24px;
+    height: 24px;
+}
+
+.window.mobile .control i {
+    font-size: 12px;
+    opacity: 1;
+}
+
+/* Maximize/Restore Transitions */
+.window {
+    transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+}
+
+.window.maximized {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.window.maximized .window-header {
+    border-radius: 0;
+}
+
+.window.maximized .window-resize-handle {
+    display: none;
+}
+
+/* Window States and Animations */
+.window.closing {
+    animation: windowClose 0.2s ease-out forwards;
+}
+
+.window.minimizing {
+    animation: windowMinimize 0.2s ease-out forwards;
+}
+
+@keyframes windowClose {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes windowMinimize {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Improved Mobile Touch Handling */
+@media (max-width: 768px) {
+    .window-content {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+    }
+    
+    .window-header {
+        cursor: default;
+    }
+    
+    .control {
+        padding: 8px;
+        touch-action: manipulation;
+    }
+}
+
+/* Better Desktop Interactions */
+@media (min-width: 769px) {
+    .window {
+        will-change: transform, width, height;
+    }
+    
+    .window-resize-handle {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        cursor: se-resize;
+        z-index: 10;
+    }
+    
+    .window-resize-handle:hover::after {
+        content: '';
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid var(--header_accent);
+        border-bottom: 2px solid var(--header_accent);
+        opacity: 0.5;
+    }
+}
+
+/* High DPI Screen Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .window {
+        border-width: 0.5px;
+    }
+    
+    .control {
+        border-width: 0.5px;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .window {
+        transition: none !important;
+    }
+    
+    .window.closing,
+    .window.minimizing {
+        animation: none !important;
+    }
+}
+
+
+/* Window Z-index Management */
+.window {
+    z-index: var(--z-window);
+}
+
+.window.active {
+    z-index: var(--z-window-active);
+}
+
+.window.maximized {
+    z-index: var(--z-window-maximized) !important;
+}
+
+#taskbar {
+    z-index: var(--z-taskbar);
+}
+
+/* Ensure modals stay on top */
+.modal, 
+.overlay {
+    z-index: var(--z-modal);
+}
+
+.term-section ul ul li::before {
+    content: '◦';
+    color: var(--bright-accent);
+}
+
+/* Base Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Window Adjustments */
+    .window {
+        width: 92vw !important;
+        min-width: unset;
+        left: 4vw !important;
+        max-height: calc(100vh - var(--header-height) - var(--mobile-nav-height) - 20px);
+        border-radius: 12px;
+        position: fixed;
+        transform: none !important;
+        top: calc(var(--header-height) + 10px);
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    /* Improved Touch Controls */
+    .window-header {
+        padding: 12px !important;
+        height: auto !important;
+        min-height: 48px;
+        cursor: default;
+    }
+
+    .window-controls .control {
+        width: 32px !important;
+        height: 32px !important;
+        margin-left: 8px !important;
+    }
+
+    .control i {
+        font-size: 14px !important;
+        opacity: 1 !important;
+    }
+
+    /* Better Content Scrolling */
+    .window-content {
+        -webkit-overflow-scrolling: touch;
+        padding: 16px !important;
+        overflow-y: auto !important;
+    }
+
+    /* Hide Desktop Elements */
+    .window-resize-handle,
+    .minimize,
+    .maximize,
+    .desktop-icon,
+    #active-windows {
+        display: none !important;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+        display: flex !important;
+        height: var(--mobile-nav-height);
+        padding: 8px;
+        background: var(--95-white);
+        backdrop-filter: blur(10px);
+        border-top: 2px solid var(--bright-accent);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: var(--z-taskbar);
+    }
+
+    /* Simplified Menu Bar */
+    #taskbar {
+        height: var(--header-height);
+        padding: 0 8px;
+    }
+
+    .menu-bar-item:not(:first-child) {
+        display: none !important;
+    }
+
+    /* Form Elements */
+    input, textarea, select {
+        font-size: 16px !important;
+        padding: 12px !important;
+    }
+}
+
+/* Small Screen Optimizations */
+@media screen and (max-width: 380px) {
+    :root {
+        --header-height: 100%;
+        --mobile-nav-height: 50px;
+    }
+
+    .window {
+        width: 96vw !important;
+        left: 2vw !important;
+    }
+
+    .window-controls .control {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .mobile-nav {
+        padding: 4px;
+    }
+}
+
+/* Landscape Mode */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .window {
+        max-height: calc(100vh - var(--header-height) - 20px);
+    }
+
+    .mobile-nav {
+        display: none !important;
+    }
+}
+
+/* Touch Optimizations */
+@media (hover: none) {
+    .window-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .control, 
+    .mobile-nav-item {
+        touch-action: manipulation;
+    }
+}
+
+.mobile-window {
+    transition: transform 0.3s ease;
+}
+
+.window-opening {
+    animation: slideInUp 0.3s ease;
+}
+
+.window-closing {
+    animation: slideOutDown 0.3s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutDown {
+    from {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #taskbar {
+        height: 100%;
+        padding: 0 8px;
+    }
+
+    .menu-bar {
+        width: 5%;
+        height: 100%
+    }
+
+    .menu-bar-item:not(:first-child) {
+        display: none;
+    }
+
+    .menu-bar-item:first-child {
+        font-size: 14px;
+    }
+
+    #active-windows {
+        display: none;
+    }
+
+    .status-group {
+        gap: 12px;
+    }
+
+    .status-group i {
+        font-size: 14px;
+    }
+
+    #time {
+        min-width: 48px;
+        font-size: 12px;
+    }
+
+    .theme-toggle-btn {
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-bar-item span {
+        display: none;
+    }
+
+    .status-group i:not(:last-child) {
+        display: none;
+    }
+}
+
+/* Submenu styles */
+.menu-item.has-submenu {
+    position: relative;
+}
+
+.menu-item.has-submenu .submenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px --10-black;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+}
+
+.menu-item.has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Hover effect for submenu items */
+.submenu .menu-item {
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+
+.submenu .menu-item:hover {
+    background: var(--10-accent_hover);
+}
+
+/* Light theme submenu styles */
+.menu-item.has-submenu .submenu {
+    background: white;
+    border: 1px solid var(--20-accent_hover);
+    box-shadow: 0 4px 12px --10-black;
+}
+
+.submenu .menu-item:hover {
+    background: var(--10-accent_hover);
+}
+
+/* For items with submenu that use flex layout */
+.menu-item.has-submenu > div {
+    gap: 2rem;  /* Match the spacing in regular menu items */
+}
+
+.menu-item.has-submenu i {
+    width: 1.5rem;  /* Fixed width for icons to align text */
+    text-align: center;
+    margin-right: 0.5rem;  /* Additional space after icon */
+}
+
+.menu-item.has-submenu .fa-chevron-right {
+    margin-left: auto;  /* Push chevron to the right */
+    width: auto;  /* Don't apply fixed width to chevron */
+    margin-right: 0;  /* Remove right margin from chevron */
+}
+
+/* Desktop Icons */
+.desktop-icon {
+    width: 90px;
+    margin: 16px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    gap: 8px;
+    /* padding: 8px; */
+    /* border-radius: 8px; */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: var(--10-white);
+    backdrop-filter: blur(4px);
+}
+
+.desktop-icon:hover {
+    background: var(--20-white);
+    /* border-color: var(--bright-accent); */
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 8px 24px var(--30-header_accent),
+}
+
+.desktop-icon img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s ease;
+}
+
+.desktop-icon:hover img {
+    transform: scale(1.1);
+}
+
+.desktop-icon span {
+    font-size: 12px;
+    text-align: center;
+    color: var(--navyb);
+    text-shadow: 1px 1px 0px var(--50-white);
+    font-weight: 500;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.desktop-icon i {
+    font-size: 28px;
+    color: var(--icon-accent);
+    background: var(--95-white);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 12px var(--15-icon-accent),
+        inset 0 0 0 1px var(--70-white);
+}
+
+.desktop-icon:hover i {
+    transform: scale(1.1);
+    background: white;
+    box-shadow: 
+        0 6px 16px var(--25-icon-accent),
+        inset 0 0 0 1px white;
+}
+
+.wc-container {
+    padding: 10px;
+  }
+  
+ @media screen and (max-width: 768px) {
+    .window {
+        width: 92vw !important;
+        min-width: unset;
+        left: 4vw !important;
+        max-height: calc(100vh - var(--header-height) - 100px) !important; /* Account for dock */
+        border-radius: 12px;
+        position: fixed;
+        transform: none !important;
+        top: calc(var(--header-height) + 10px);
+        overflow: hidden;
+        touch-action: none;
+        margin-bottom: 80px !important; /* Add margin for dock */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-bottom: 80px !important; /* Height of the dock */
+    }
+}
+
+.start-menu-header button {
+    position: relative;
+    border: 1px solid var(--30-header_accent);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 4px --10-black;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+}
+
+.start-menu-header button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--10-black);
+    border-color: var(--60-header_accent);
+}
+
+.start-menu-header button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px --10-black;
+}
+
+
+/* Add these to your CSS */
+.menu-bar-item:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    background: var(--10-white);
+    border-radius: 8px;
+    border: 1px solid var(--30-header_accent);
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+}
+
+.menu-bar-item:first-child:hover {
+    background: var(--20-white);
+    border-color: var(--60-header_accent);
+    transform: translateY(-1px);
+}
+
+.menu-bar-item:first-child:active {
+    transform: translateY(0);
+}
+
+.menu-bar-item:first-child .logo-container {
+    background: var(--95-white);
+    border-radius: 6px;
+    padding: 2px;
+    border: 1px solid var(--95-white);
+}
+
+
+body .menu-items {
+    padding: 8px;
+}
+
+body:not(.dark-theme) .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--icon-accent);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+body .menu-item:hover {
+    background: var(--10-accent_hover);
+}
+
+body .menu-divider {
+    height: 1px;
+    background: var(--20-accent_hover);
+    margin: 8px 0;
+}
+
+body .submenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: var(--95-white);
+    border: 1px solid var(--50-accent_hover);
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 200px;
+    display: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 15px --10-black;
+}
+
+body .menu-item.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Animation */
+@keyframes menuSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
