@@ -186,39 +186,6 @@ const WindowSystem = {
             // this.addToTaskbar(windowId, type);
         }
 
-        // Initialize specific window types
-        if (type === 'snake') {
-            const container = document.createElement('div');
-            container.id = 'snake-root';
-            windowElement.querySelector('.window-content').appendChild(container);
-            
-            if (window.initSnakeGame) {
-                window.initSnakeGame(windowId);
-            } else {
-                console.error('Snake game initialization function not found');
-            }
-        } else if (type === 'paint') {
-            if (typeof window.initPaintApp === 'function') {
-                window.initPaintApp(windowId);
-            } else {
-                console.error('Paint app initialization function not found');
-            } 
-        }else if (type === 'tetris') {   // Add this new section
-            const container = document.createElement('div');
-            container.id = 'tetris-root';
-            windowElement.querySelector('.window-content').appendChild(container);
-            
-            if (window.initTetrisGame) {
-                window.initTetrisGame(windowId);
-            } else {
-                console.error('Tetris game initialization function not found');
-            }
-         } else if (type === 'webcam') {
-            if (typeof window.initWebcamWindow === 'function') {
-                window.initWebcamWindow(windowId);
-            }
-        }
-
         this.setActiveWindow(windowId);
         
         this.windows.push({
@@ -245,16 +212,6 @@ const WindowSystem = {
         } else {
             windowElement.classList.add('closing');
             setTimeout(() => {
-                // Clean up specific window types
-                if (windowData && windowData.type === 'snake') {
-                    window.cleanupSnakeGame(windowId);
-                } else if (windowData && windowData.type === 'paint') {
-                    window.cleanupPaintApp(windowId);
-                }else if (windowData && windowData.type === 'tetris') {  // Add this
-                    window.cleanupTetrisGame(windowId);
-                } else if (windowData && windowData.type === 'webcam') {
-                    window.cleanupWebcamWindow?.(windowId);
-                }
                 
                 windowElement.remove();
                 // this.removeFromTaskbar(windowId);
@@ -609,12 +566,6 @@ const WindowSystem = {
         return titles[type] || type.charAt(0).toUpperCase() + type.slice(1);
     },
 
-    cleanupSnakeGame(windowId) {
-        const container = document.querySelector(`#${windowId} #snake-root`);
-        if (container) {
-            ReactDOM.unmountComponentAtNode(container);
-        }
-    },
 
     handleWindowResize() {
         const isMobile = this.isMobileDevice();
