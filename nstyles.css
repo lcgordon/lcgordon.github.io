@@ -1875,7 +1875,7 @@ a[href^='http']:hover {
         width: 92vw !important;
         min-width: unset;
         left: 4vw !important;
-        max-height: calc(50vh); 
+        max-height: calc(47vh); 
         /* !important; Account for dock YYY */
         border-radius: 12px;
         position: fixed;
