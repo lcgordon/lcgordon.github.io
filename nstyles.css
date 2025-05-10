@@ -884,6 +884,10 @@ a[href^='http']:hover {
         gap: 8px !important;
     }
 
+    .linkmenu {
+        width: 0px;
+    }
+
 }
 
 /* Landscape Mode */
@@ -907,6 +911,9 @@ a[href^='http']:hover {
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr) !important;
     }
+    .linkmenu {
+        width: 0px;
+    }
 
 }
 
@@ -927,6 +934,9 @@ a[href^='http']:hover {
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr) !important;
     }
+    .linkmenu {
+        width: 0px;
+    }
 
 }
 
@@ -938,6 +948,9 @@ a[href^='http']:hover {
 
     .gallery-grid {
         grid-template-columns: repeat(4, 1fr) !important;
+    }
+    .linkmenu {
+        width: 0px;
     }
 
 }
@@ -1023,6 +1036,9 @@ a[href^='http']:hover {
     .theme-toggle-btn {
         padding: 4px;
         margin: 0 4px;
+    }
+    .linkmenu {
+        width: 0px;
     }
 }
 
