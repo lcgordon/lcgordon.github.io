@@ -35,9 +35,11 @@ const WindowSystem = {
 
     getWindowSize(type) {
         if (this.isMobileDevice()) {
+            
             return {
+                
                 width: window.innerWidth * 0.92,
-                height: window.innerHeight - 120
+                height: window.innerHeight + 120
             };
         }
 
@@ -46,7 +48,7 @@ const WindowSystem = {
             about: { width: 1000, height: 600 },
             contact: { width: 1200, height: 400 },
             projects: { width: 800, height: 600 },
-            links: { width: 700, height: 600 },
+            links: { width: 700, height: 400 },
             console: {width:600, height:60},
         };
         return sizes[type] || { width: 500, height: 600 };
@@ -56,7 +58,8 @@ const WindowSystem = {
         if (this.isMobileDevice()) {
             return {
                 x: (window.innerWidth - size.width) / 2,
-                y: 60
+                // y: 60
+                y: (window.innerHeight - size.height) / 2
             };
         }
 
@@ -501,12 +504,16 @@ const WindowSystem = {
 
     centerWindowOnMobile(windowElement) {
         if (!this.isMobileDevice()) return;
+        console.log("innerwidth:"+ window.innerWidth);
+        console.log("innerheight:"+ window.innerHeight);
         
         const width = Math.min(window.innerWidth * 0.92, 500);
+        const height = 500; 
+        console.log(height);
         windowElement.style.width = `${width}px`;
         windowElement.style.left = '50%';
         windowElement.style.transform = 'translateX(-50%)';
-        windowElement.style.top = '60px';
+        windowElement.style.top = '350px';
     },
 
     addToTaskbar(windowId, type) {
