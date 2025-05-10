@@ -143,6 +143,7 @@ const WindowSystem = {
                  style="width: ${size.width}px;
                         height: ${size.height}px;
                         z-index: ${this.zIndexCounter++};">
+                
                 <div class="window-header">
                     <div class="window-title">
                         <img src="${this.getIconForType(type)}" style="padding:0; height:16px;width:16px;position:relative;"></img>
@@ -151,7 +152,7 @@ const WindowSystem = {
                     <div class="window-controls">
                         ${isMobile ? `
                            
-                            <button class="windows-button" style="padding:0; height:16px;width:16px;position:relative;">
+                            <button class="windows-button" onclick="WindowSystem.closeWindow('${windowId}')" style="padding:0; height:16px;width:16px;position:relative;">
                             <img src="img/icons/close.png" style="position:absolute;left:1px;top:0px;">
                             </button>
 				
@@ -163,6 +164,8 @@ const WindowSystem = {
                         `}
                     </div>
                 </div>
+
+
                 <div class="window-content">
                     ${contentHTML}
                 </div>
