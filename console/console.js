@@ -175,25 +175,34 @@ function START_WINDOW_CMD() {
         }
     }
 
-    function initUser() {
-        return [new User('vuila9'), new User('ptkv'), new User('guest')];
-    }
-
     function command_handler(command) {
-        switch (command){
+        const command_components = command.split(" ").slice(1);
+        const command_name = command.split(" ")[0];
+
+        switch (command_name){
             case '':
                 break;
 
-            case 'cls':
-                CMD_CONSOLE.innerHTML = '';
+            case '--help':
+                handleHelp(command);
                 break;
-            case 'whoami':
-                CMD_CONSOLE.innerHTML += `<br><span>${CURRENT_USER.getUsername()}</span><br>`;
+
+            case 'echo':
+                handleEcho(command_components);
                 break;
+
             default:
                 CMD_CONSOLE.innerHTML += `<br><span>zsh: command not found: ${command.split(" ")[0]}</span>`;
                 break;
         }
+    }
+
+    function handleHelp(command) {
+        CMD_CONSOLE.innerHTML += `<br><span>Welcome to the list of currently available commands: <br> echo - display a line of text <br>Last updated: 5/28/25</span>`;
+    }
+
+    function handleEcho(command_components) {
+        CMD_CONSOLE.innerHTML += `<br><span>echo ${command_components.join(" ")} </span>`;
     }
 }
 
