@@ -1,11 +1,8 @@
 function START_WINDOW_CMD() {
     const CMD_CONSOLE = document.getElementById("cmd-body");
     console.log('attempting to start window...');
-    // let USERS = [new User('vuila9'), new User('ptkv'), new User('guest')];   // Initialize some users
     let DIR = 'C:'                   // Current directory
-    // let THE_PROMPT = `${DIR}\\>`     // The first part of every COMMAND line
     let THE_PROMPT = `username@lcgordon.github.io ~ %`
-    // let CURRENT_USER = USERS[0];
     let COMMAND = '';                // To store user input
     let CURSOR_POS = 0;    // track where the cursor is
     let HISTORY_POS = 0;
@@ -191,18 +188,39 @@ function START_WINDOW_CMD() {
                 handleEcho(command_components);
                 break;
 
+            case 'ls':
+                handleLS(command);
+                break;
+
+            case 'pwd':
+                handlePWD(command);
+                break;
+
             default:
                 CMD_CONSOLE.innerHTML += `<br><span>zsh: command not found: ${command.split(" ")[0]}</span>`;
                 break;
         }
     }
 
+
+    function handlePWD(command) {
+        CMD_CONSOLE.innerHTML += `<br><span>/Users/lcgordon/</span>`;
+    }
+
+    function handleLS(command) {
+        CMD_CONSOLE.innerHTML += `<br><span>movie_code.py</span>`;
+    }
+
     function handleHelp(command) {
-        CMD_CONSOLE.innerHTML += `<br><span>Welcome to the list of currently available commands: <br> echo - display a line of text <br>Last updated: 5/28/25</span>`;
+        CMD_CONSOLE.innerHTML += `<br><span>Welcome to the list of currently available commands:</span>`;
+        CMD_CONSOLE.innerHTML += `<br>echo - display a line of text `;
+        CMD_CONSOLE.innerHTML += `<br>ls - list directory contents `;
+        CMD_CONSOLE.innerHTML += `<br>pwd - print name of current/working directory `;
+        CMD_CONSOLE.innerHTML += `<br>Last updated: 6/20/25`;
     }
 
     function handleEcho(command_components) {
-        CMD_CONSOLE.innerHTML += `<br><span>echo ${command_components.join(" ")} </span>`;
+        CMD_CONSOLE.innerHTML += `<br><span>${command_components.join(" ")} </span>`;
     }
 }
 
