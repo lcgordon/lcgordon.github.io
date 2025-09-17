@@ -31,12 +31,13 @@
             
             <div class="desktop-icon" data-window="projects">
                 <img src="img/icons/shell_window5-0.png" alt="Projects" class="w-12 h-12 object-contain">
-                <span>Projects</span>
+                <span>Research</span>
             </div>
-            <div class="desktop-icon" data-window="links">
-                <img src="img/icons/help_book_cool-4.png" alt="Credits" class="w-12 h-12 object-contain">
-                <span>Credits</span>
+            <div class="desktop-icon" data-window="software">
+                <img src="img/icons/cd_drive-0.png" alt="yt_moviemaker" class="w-12 h-12 object-contain">
+                <span>Software</span>
             </div>
+            
             <div class="desktop-icon">
                 <a href="CV_LGordon.pdf" target="_blank"><img src="img/icons/notepad_file-0.png" alt="My CV" class="w-12 h-12 object-contain"></a>
                 <span><i class="fa fa-external-link" aria-hidden="true" id="astrobites"></i>My CV</span>
@@ -51,10 +52,11 @@
                 <img src="img/icons/console_prompt-0.png" alt="Console" class="w-12 h-12 object-contain">
                 <span>Console</span>
             </div>
-            <div class="desktop-icon">
-                <a href="https://yt-moviemaker.readthedocs.io" target="_blank"><img src="img/icons/notepad_file-2.png" alt="yt_moviemaker" class="w-12 h-12 object-contain"></a>
-                <span><i class="fa fa-external-link" aria-hidden="true" id="astrobites"></i>yt_moviemaker</span>
+            <div class="desktop-icon" data-window="links">
+                <img src="img/icons/help_book_cool-4.png" alt="Credits" class="w-12 h-12 object-contain">
+                <span>Credits</span>
             </div>
+            
 
         </div>
 
@@ -65,10 +67,9 @@
    <template id="welcome">
         <div class="wc-container">
             
-            <p>Hi! I'm Lindsey Gordon, a fourth year Ph.D. candidate in astrophysics at the University of Minnesota. I work on AGN jet - ICM feedback, mostly in the realm of
+            <p>Hi! I'm Lindsey Gordon, a fifth year Ph.D. candidate in astrophysics at the University of Minnesota. I work on AGN jet - ICM feedback, mostly in the realm of
                 simulations and HPC. You can check out the links on the desktop to learn more about me and my research work.
             </p>
-            <p> This website is still under a bit of construction, please be patient! - LG 5/10/25</p>
         </div>
 
    </template>
@@ -123,6 +124,16 @@
             width="100%" 
             height="100%" 
             src="internal/projects.html"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </template>
+
+    <template id="software">
+        <iframe 
+            width="100%" 
+            height="100%" 
+            src="internal/software.html"
             loading="lazy"
             allowfullscreen>
         </iframe>

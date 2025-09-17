@@ -9,7 +9,7 @@ const WindowSystem = {
     activeWindow: null,
     zIndexCounter: 50,
     mobileInitialized: false,
-    iframeWindows: ['about', 'projects',  'links', 'console'],
+    iframeWindows: ['about', 'projects',  'links', 'console', 'software'],
 
     isMobileDevice() {
         return window.innerWidth <= 768;
@@ -44,7 +44,7 @@ const WindowSystem = {
         }
 
         const sizes = {
-            welcome: { width: 600, height: 40 },
+            welcome: { width: 600, height: 10 },
             about: { width: 1000, height: 600 },
             contact: { width: 1200, height: 400 },
             projects: { width: 800, height: 600 },
@@ -556,6 +556,7 @@ const WindowSystem = {
             welcome: 'img/icons/computer-5.png',
             about: 'img/icons/directory_open_file_mydocs-5.png',
             projects: 'img/icons/shell_window5-0.png',
+            software: 'img/icons/cd_drive-0.png',
             console: 'img/icons/console_prompt-0.png',
             links: 'img/icons/help_book_cool-4.png',
             
@@ -567,7 +568,8 @@ const WindowSystem = {
         const titles = {
             welcome: 'lindsey.txt',
             about: 'About Me',
-            projects: 'Projects',
+            projects: 'Research Projects',
+            software: "Software Projects",
             contact: 'Contact',
             links: 'Credits',
             astro: 'Astrobites',
