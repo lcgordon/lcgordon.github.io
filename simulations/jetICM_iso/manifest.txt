@@ -1,1 +1,16 @@
-masterlist of everything in this folder w/ sim. details. 
+Key to simulations in this folder: 
+
+- first few words are the names of the runs (ie N0J, NAJ, NDJ)
+- next indicates field (density)
+- fixedcbar means that all frames have been rescaled to a fixed color normalization
+
+
+Files: 
+
+N0J_NAJ_NDJ_density_movie_fixedcbar.mp4
+N0J_NAJ_NDJ_magnetic_field_magnitude_movie_fixedcbar.mp4
+N0J_NAJ_NDJ_velocity_magnitude_movie_fixedcbar.mp4
+
+NDJ_NDJ2_NDJ3_density_movie_fixedcbar.mp4
+NDJ_NDJ2_NDJ3_magnetic_field_magnitude_movie_fixedcbar.mp4
+NDJ_NDJ2_NDJ3_velocity_magnitude_movie_fixedcbar.mp4
